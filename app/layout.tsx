@@ -3,8 +3,15 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const geistSans = Geist({
+  subsets: ['latin'],
+  variable: '--font-sans',
+})
+
+const geistMono = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+})
 
 export const viewport: Viewport = {
   themeColor: '#0a0a0a',
@@ -12,8 +19,10 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Nallakaruppannasamy R - Full Stack Developer',
-  description: 'Premium portfolio showcasing projects, skills, and experience. Dark mode with glassmorphism design.',
+  title: 'Nallakaruppannasamy R | Full Stack Developer & ECE Student',
+  description: 'Portfolio of Nallakaruppannasamy R, an ECE student at Sathyabama University specializing in MERN stack development, IoT, and UI/UX design.',
+  keywords: ['Nallakaruppannasamy R', 'MERN Stack', 'Full Stack Developer', 'Sathyabama University', 'Electronics and Communication Engineering', 'Portfolio'],
+  authors: [{ name: 'Nallakaruppannasamy R' }],
   generator: 'v0.app',
   icons: {
     icon: [
@@ -40,8 +49,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className="font-sans antialiased dark">
+    <html lang="en" className="dark" style={{ scrollBehavior: 'smooth' }}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}
+      >
         {children}
         <Analytics />
       </body>

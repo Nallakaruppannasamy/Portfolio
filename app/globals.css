@@ -4,33 +4,33 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.96 0.01 230);
-  --foreground: oklch(0.12 0 0);
+  /* Core Shadcn Base Colors */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.5 0.25 190);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.9 0.02 180);
-  --secondary-foreground: oklch(0.145 0 0);
-  --muted: oklch(0.9 0.02 180);
-  --muted-foreground: oklch(0.5 0 0);
-  --accent: oklch(0.55 0.28 190);
-  --accent-foreground: oklch(1 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.9 0.01 0);
-  --input: oklch(0.95 0.01 0);
-  --ring: oklch(0.55 0.28 190);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --radius: 0.625rem;
+
+  /* Custom Portfolio Accents (Neon Cyan) */
   --cyan: oklch(0.55 0.28 190);
   --neon-cyan: oklch(0.5 0.32 188);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
+
+  /* Sidebar and Charts */
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -39,35 +39,40 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
 }
 
 .dark {
-  --background: oklch(0.08 0 0);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.12 0 0);
-  --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(0.12 0 0);
-  --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.65 0.3 190);
-  --primary-foreground: oklch(0.08 0 0);
-  --secondary: oklch(0.2 0 0);
-  --secondary-foreground: oklch(0.95 0 0);
-  --muted: oklch(0.2 0 0);
-  --muted-foreground: oklch(0.6 0 0);
-  --accent: oklch(0.65 0.3 190);
-  --accent-foreground: oklch(0.08 0 0);
+  /* Core Shadcn Dark Base */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.2 0 0);
-  --input: oklch(0.2 0 0);
-  --ring: oklch(0.4 0 0);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+
+  /* Dark Mode Portfolio Accents */
   --cyan: oklch(0.65 0.3 190);
   --neon-cyan: oklch(0.68 0.35 188);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
+
+  /* Sidebar and Charts */
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
@@ -76,6 +81,11 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
 }
 
 @theme inline {
@@ -127,8 +137,8 @@
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
   }
-  
-  /* Glassmorphism effect */
+
+  /* Premium UI Effects */
   .glass {
     @apply backdrop-blur-xl bg-white/40 border border-white/30;
   }
@@ -137,7 +147,6 @@
     @apply backdrop-blur-xl bg-black/30 border border-white/10;
   }
   
-  /* Light mode glassmorphism */
   .dark .glass {
     @apply backdrop-blur-xl bg-white/10 border border-white/20;
   }
@@ -146,12 +155,46 @@
     @apply backdrop-blur-xl bg-white/30 border border-cyan-400/30;
   }
   
-  /* Cyan glow effect */
   .glow-cyan {
-    @apply shadow-[0_0_20px_rgba(99,_102,_241,_0.5)];
+    @apply shadow-[0_0_20px_rgba(6,182,212,0.5)];
   }
   
   .glow-cyan-lg {
-    @apply shadow-[0_0_40px_rgba(99,_102,_241,_0.6)];
+    @apply shadow-[0_0_40px_rgba(6,182,212,0.6)];
+  }
+
+  /* Feature 1 & 9: Dynamic Blur & Noise Texture */
+  .nav-glass {
+    @apply backdrop-blur-md bg-black/20 border-b border-white/10 transition-all duration-500;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3C%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 100px;
+    opacity: 0.98;
+  }
+
+  .nav-scrolled {
+    @apply backdrop-blur-2xl bg-black/60 border-b border-cyan-500/20 py-3;
+  }
+
+  /* Feature 4: Logo Glow Pulse */
+  @keyframes logo-pulse {
+    0%, 100% { filter: drop-shadow(0 0 2px rgba(6, 182, 212, 0.4)); }
+    50% { filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.8)); }
+  }
+  .animate-logo-pulse:hover {
+    animation: logo-pulse 2s infinite ease-in-out;
+  }
+
+  /* Feature 16: Availability Indicator */
+  .status-pulse {
+    @apply w-2 h-2 rounded-full bg-emerald-500 inline-block mr-2;
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
+    animation: status-glow 2s infinite;
+  }
+
+  @keyframes status-glow {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
   }
 }

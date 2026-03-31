@@ -163,7 +163,7 @@ export default function ContactSection() {
                     name="name"
                     required
                     placeholder="Enter your name"
-                    className="w-full bg-white/[0.03] border border-white/5 p-6 rounded-2xl text-white focus:outline-none focus:border-cyan-500/50 transition-all font-light"
+                    className="w-full bg-white/3 border border-white/5 p-6 rounded-2xl text-white focus:outline-none focus:border-cyan-500/50 transition-all font-light"
                   />
                 </div>
 
@@ -174,7 +174,7 @@ export default function ContactSection() {
                     name="email"
                     required
                     placeholder="Enter your email"
-                    className="w-full bg-white/[0.03] border border-white/5 p-6 rounded-2xl text-white focus:outline-none focus:border-cyan-500/50 transition-all font-light"
+                    className="w-full bg-white/3 border border-white/5 p-6 rounded-2xl text-white focus:outline-none focus:border-cyan-500/50 transition-all font-light"
                   />
                 </div>
 
@@ -185,7 +185,7 @@ export default function ContactSection() {
                     required
                     rows={4}
                     placeholder="Tell me about your project, idea, or question..."
-                    className="w-full bg-white/[0.03] border border-white/5 p-6 rounded-2xl text-white focus:outline-none focus:border-cyan-500/50 transition-all font-light resize-none"
+                    className="w-full bg-white/3 border border-white/5 p-6 rounded-2xl text-white focus:outline-none focus:border-cyan-500/50 transition-all font-light resize-none"
                   />
                 </div>
 
@@ -198,7 +198,7 @@ export default function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="relative px-12 py-5 bg-gradient-to-r from-[#ff819c] to-[#7fffd4] rounded-full font-black text-black uppercase text-xs tracking-widest overflow-hidden hover:scale-105 active:scale-95 transition-all group/btn disabled:opacity-50 disabled:grayscale"
+                    className="relative px-12 py-5 bg-linear-to-r from-[#ff819c] to-[#7fffd4] rounded-full font-black text-black uppercase text-xs tracking-widest overflow-hidden hover:scale-105 active:scale-95 transition-all group/btn disabled:opacity-50 disabled:grayscale"
                   >
                     <span className="relative z-10 flex items-center gap-3">
                       {isSubmitting ? 'Transmitting...' : 'Submit Payload'}

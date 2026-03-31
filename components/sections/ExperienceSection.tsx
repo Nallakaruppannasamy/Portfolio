@@ -11,7 +11,7 @@ export default function ExperienceSection() {
     const experiences = [
         {
             company: 'Zyra Academy',
-            logo: '/zyra_logo.png',
+            logo: '/logo/zyra_logo.png',
             location: 'Chennai, TN • Remote',
             duration: 'Mar 2026 - Present',
             roles: [
@@ -27,7 +27,7 @@ export default function ExperienceSection() {
         },
         {
             company: 'ISTE ECE (SIST) Student Chapter',
-            logo: '/iste_logo.png',
+            logo: '/logo/iste_logo.png',
             location: 'Sathyabama Institute, Chennai',
             duration: 'Mar 2025 - Present',
             roles: [
@@ -51,7 +51,7 @@ export default function ExperienceSection() {
         },
         {
             company: 'Sathyabama Institute of Science and Technology',
-            logo: '/sist_logo.jpeg',
+            logo: '/logo/sist_logo.jpeg',
             location: 'Chennai, TN',
             duration: 'Aug 2024 - Present',
             roles: [

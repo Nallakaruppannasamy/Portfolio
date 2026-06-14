@@ -74,6 +74,9 @@ export default function ContactSection() {
       <div className="absolute top-0 right-0 w-100 h-100 bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-100 h-100 bg-purple-500/5 rounded-full blur-[150px] pointer-events-none" />
 
+      {/* Subtle Moving Grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-size-[40px_40px]" />
+
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
 

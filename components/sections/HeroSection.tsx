@@ -78,13 +78,13 @@ export default function HeroSection() {
         />
 
         {/* Feature: Smooth Mouse Follower Glow */}
-        <motion.div
+        {/* <motion.div
           className="absolute w-150 h-150 rounded-full bg-cyan-500/20 blur-[120px] pointer-events-none"
           style={{
             x: useTransform(mouseX, (x) => x - 300),
             y: useTransform(mouseY, (y) => y - 300),
           }}
-        />
+        /> */}
       </div>
 
       {/* Feature 2: Terminal Boot Overlay */}
@@ -97,10 +97,11 @@ export default function HeroSection() {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               <p className="mb-2 text-sm md:text-base">{`> Initializing MERN_Engine...`}</p>
               <p className="mb-2 text-sm md:text-base">{`> Mounting IT_Architecture...`}</p>
+              <p className="mb-2 text-md md:text-2xl">{`> LOADING PORTFOLIO...`}</p>
               <motion.p
                 animate={{ opacity: [0, 1] }}
                 transition={{ repeat: Infinity, duration: 0.5 }}
-                className="text-sm md:text-base"
+                className="text-lg md:text-3xl"
               >{`> _`}</motion.p>
             </motion.div>
           </motion.div>
@@ -179,7 +180,7 @@ export default function HeroSection() {
             </div>
             <div className="text-[10px] font-mono text-muted-foreground uppercase flex flex-col gap-1">
               <div className="flex items-center gap-2"><Globe size={10} /> <span>Loc: Chennai, INDIA</span></div>
-              <div className="flex items-center gap-2"><Cpu size={10} /> <span>Stack: MERN_Engine_v1.0</span></div>
+              <div className="flex items-center gap-2"><Cpu size={10} /> <span>Stack: MERN Engine</span></div>
             </div>
           </motion.div>
         </motion.div>

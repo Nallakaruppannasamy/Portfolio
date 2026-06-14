@@ -7,9 +7,6 @@ import {
   Terminal,
   Cpu,
   Layers,
-  Users2,
-  Zap,
-  Infinity as InfinityIcon
 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -91,7 +88,7 @@ export default function SkillsSection() {
     { name: 'Canva', src: '/icons/CANVA_logo.svg' },
   ];
 
-  const duplicatedSkills = [...marqueeSkills, ...marqueeSkills];
+  const duplicatedSkills = [...marqueeSkills, ...marqueeSkills, ...marqueeSkills];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -104,22 +101,26 @@ export default function SkillsSection() {
   };
 
   return (
-    <section id="skills" ref={ref} className="relative min-h-screen py-24 px-8 md:px-16 bg-[#050505] overflow-hidden selection:bg-cyan-500/30">
+    <section id="skills" ref={ref} className="relative min-h-screen py-24 px-4 sm:px-8 md:px-16 bg-[#050505] overflow-hidden selection:bg-cyan-500/30">
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      {/* Subtle Moving Grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-size-[40px_40px]" />
+
+      <div className="relative z-10 max-w-7xl mx-auto w-full">
+        
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
-          className="mb-20"
+          className="mb-20 text-center sm:text-left"
         >
           <h2 className="text-4xl md:text-7xl font-black mb-4 tracking-tighter italic uppercase group cursor-default text-white">
             <span className="bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:animate-pulse">
               Tech_Stack
             </span>
           </h2>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-center sm:justify-start gap-4">
             <div className="h-0.5 w-24 bg-cyan-500 shadow-[0_0_15px_#06b6d4]" />
             <p className="text-gray-600 font-mono text-xs uppercase tracking-[0.5em]">{`> diagnostic.run()`}</p>
           </div>
@@ -135,7 +136,7 @@ export default function SkillsSection() {
           {skillCategories.map((category, index) => (
             <motion.div key={index} variants={itemVariants} className="group relative h-full">
               <div className="absolute -inset-px bg-linear-to-r from-cyan-500 to-purple-600 rounded-[2.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-[1px]" />
-              <div className="relative glass-dark p-8 rounded-[2.5rem] h-full transition-all duration-500 overflow-hidden border border-white/5 bg-[#080808]">
+              <div className="relative glass-dark p-6 sm:p-8 rounded-[2.5rem] h-full transition-all duration-500 overflow-hidden border border-white/5 bg-[#080808]">
                 <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/3 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="flex justify-between items-start mb-8 text-cyan-400">
@@ -166,72 +167,50 @@ export default function SkillsSection() {
           ))}
         </motion.div>
 
-        {/* Knowledge Graph Area */}
-        {/* <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2 glass-dark p-10 rounded-[2.5rem] border border-white/5 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden group">
-            <div className="relative z-10">
-              <h4 className="text-2xl font-bold text-white mb-3 tracking-tight flex items-center gap-3">
-                <Zap className="text-yellow-400 animate-pulse" size={24} /> System_Knowledge_Graph
-              </h4>
-              <p className="text-gray-500 text-sm font-light max-w-sm leading-relaxed">Interconnected MERN expertise. Designing scalable architectures at Sathyabama University.</p>
-            </div>
-            <div className="relative w-32 h-32 flex items-center justify-center">
-              <motion.div animate={{ rotate: 360 }} transition={{ duration: 15, repeat: Infinity, ease: "linear" }} className="absolute inset-0 border border-dashed border-cyan-500/20 rounded-full" />
-              <div className="w-12 h-12 bg-cyan-500 rounded-full blur-xl opacity-20 animate-pulse" />
-              <div className="text-cyan-500 font-black text-xl tracking-tighter">MERN</div>
-            </div>
-          </div>
-          <div className="glass-dark p-10 rounded-[2.5rem] border border-white/5 flex flex-col justify-center items-center text-center group hover:bg-cyan-500/[0.02] transition-colors">
-            <Users2 className="text-purple-500 mb-4 group-hover:scale-110 transition-transform" size={40} />
-            <span className="text-[10px] font-mono text-purple-400 uppercase tracking-[0.3em] mb-2">Social_Architecture</span>
-            <h4 className="text-lg font-bold text-white leading-tight">ISTE Council & Maatram Leadership</h4>
-            <p className="text-gray-600 text-[10px] mt-4 uppercase font-mono tracking-widest">Collab Status: Active</p>
-          </div>
-        </motion.div> */}
+        {/* --- OPTIMIZED MOBILE-RESPONSIVE MOVING CAROUSEL --- */}
+        <div className="mt-10 sm:mt-32 relative overflow-hidden py-6 sm:py-10 w-full horizontal-carousel-container">
+          {/* Enhanced Feathered Edges for Mobile Smooth Layout */}
+          <div className="absolute inset-y-0 left-0 w-12 sm:w-32 bg-linear-to-r from-[#050505] to-transparent z-30 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-12 sm:w-32 bg-linear-to-l from-[#050505] to-transparent z-30 pointer-events-none" />
 
-        {/* --- OFFICIAL LOGO MOVING CAROUSEL (SVG VERSION) --- */}
-        <div className="mt-10 relative overflow-hidden py-10">
-          <div className="absolute inset-y-0 left-0 w-32 bg-linear-to-r from-[#050505] to-transparent z-30" />
-          <div className="absolute inset-y-0 right-0 w-32 bg-linear-to-l from-[#050505] to-transparent z-30" />
-
-          <div className="flex flex-col items-center mb-16">
-            <span className="text-xl font-mono text-gray-400 uppercase tracking-[0.5em] mb-4">Integrated_Production_Stream</span>
-            <div className="h-px w-12 bg-white/10" />
+          <div className="flex flex-col items-center mb-10 sm:mb-16 text-center px-4">
+            <span className="text-[14px] sm:text-xl font-mono text-gray-200 uppercase tracking-[0.3em] sm:tracking-[0.5em] mb-4">
+              Integrated_Production_Stream
+            </span>
+            <div className="h-px w-12 bg-white/40" />
           </div>
 
-          <motion.div
-            className="flex whitespace-nowrap gap-16 items-center"
-            animate={{ x: [0, -2500] }}
-            transition={{ x: { repeat: Infinity, repeatType: "loop", duration: 40, ease: "linear" } }}
-          >
-            {duplicatedSkills.map((skill, idx) => (
-              <motion.div
-                key={idx}
-                whileHover={{ scale: 1.1 }}
-                className="flex flex-col items-center gap-5 group cursor-pointer"
-              >
-                <div className="p-3 glass rounded-4xl bg-white/2 border border-white/5 shadow-2xl transition-all duration-500 group-hover:border-white/20 relative w-24 h-24 flex items-center justify-center">
-                  <Image
-                    src={skill.src}
-                    alt={skill.name}
-                    width={32}
-                    height={32}
-                    className="grayscale group-hover:grayscale-0 transition-all duration-500 md:w-15 md:h-15 group-hover:opacity-100"
-                  />
+          <div className="w-full overflow-hidden flex">
+            <motion.div
+              className="flex whitespace-nowrap gap-8 sm:gap-16 items-center will-change-transform"
+              animate={{ x: [0, -1920] }}
+              transition={{ x: { repeat: Infinity, repeatType: "loop", duration: 35, ease: "linear" } }}
+            >
+              {duplicatedSkills.map((skill, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-col items-center gap-3 sm:gap-5 group cursor-pointer shrink-0"
+                >
+                  <div className="p-2.5 sm:p-3 glass rounded-2xl sm:rounded-4xl bg-white/2 border border-white/5 shadow-2xl transition-all duration-500 group-hover:border-white/20 relative w-16 h-16 sm:w-24 sm:h-24 flex items-center justify-center">
+                    <div className="relative w-8 h-8 sm:w-15 sm:h-15 flex items-center justify-center">
+                      <Image
+                        src={skill.src}
+                        alt={skill.name}
+                        fill
+                        className="object-contain sm:grayscale sm:group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100"
+                        sizes="(max-w: 640px) 32px, 60px"
+                      />
+                    </div>
+                  </div>
+                  <span className="text-[8px] sm:text-[9px] font-mono font-bold tracking-[0.2em] sm:tracking-[0.4em] uppercase opacity-60 sm:opacity-0 group-hover:opacity-100 transition-all text-gray-400">
+                    {skill.name}
+                  </span>
                 </div>
-                <span className="text-[9px] font-mono font-bold tracking-[0.4em] uppercase opacity-0 group-hover:opacity-100 transition-all text-gray-400">
-                  {skill.name}
-                </span>
-              </motion.div>
-            ))}
-          </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
 
-        {/* <div className="mt-16 flex justify-center opacity-30">
-          <div className="flex items-center gap-3 text-[9px] font-mono text-gray-500 uppercase tracking-widest">
-            <InfinityIcon size={14} /> <span>System_Assets_Loaded_Local</span>
-          </div>
-        </div> */}
       </div>
     </section>
   );

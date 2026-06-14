@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+import SplashCursor from '@/components/ui/SplashCursor'
 
 const geistSans = Geist({
   subsets: ['latin'],
@@ -53,6 +54,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}
       >
+        
+        <SplashCursor 
+          SPLAT_RADIUS={0.2} 
+          DENSITY_DISSIPATION={4.5}
+          CURL={4.5} 
+          RAINBOW_MODE={true} 
+        />
         {children}
         <Analytics />
       </body>

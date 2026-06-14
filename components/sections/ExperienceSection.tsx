@@ -70,14 +70,17 @@ export default function ExperienceSection() {
     return (
         <section id="experience" ref={ref} className="relative min-h-screen py-32 px-6 md:px-16 bg-[#050505] overflow-hidden">
             {/* Background Ambient Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-cyan-500/5 rounded-full blur-[160px] pointer-events-none" />
+            {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-cyan-500/5 rounded-full blur-[160px] pointer-events-none" /> */}
+
+            {/* Subtle Moving Grid */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-size-[40px_40px]" />
 
             <div className="relative z-10 max-w-5xl mx-auto">
                 {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
-                    className="mb-28"
+                    className="mb-15 sm:mb-28"
                 >
                     <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter text-white italic uppercase">
                         Experience
@@ -134,8 +137,8 @@ export default function ExperienceSection() {
                                     >
                                         {/* Timeline Node */}
                                         <div className={`absolute -left-14.75 top-2 w-5 h-5 rounded-full border-4 border-[#050505] z-10 transition-all duration-500 ${role.current
-                                                ? 'bg-emerald-500 shadow-[0_0_20px_#10b981]'
-                                                : 'bg-gray-700 border-white/5'
+                                            ? 'bg-emerald-500 shadow-[0_0_20px_#10b981]'
+                                            : 'bg-gray-700 border-white/5'
                                             }`} />
 
                                         <div className="glass-dark border border-white/5 p-8 md:p-8 rounded-[2.5rem] hover:border-cyan-500/20 transition-all duration-500 group/card">

@@ -66,7 +66,11 @@ export default function EducationSection() {
         <div className="h-[1px] w-12 bg-cyan-500/50" />
       </div> */}
 
+       {/* Subtle Moving Grid */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)] bg-size-[40px_40px]" />
+
       <div className="relative z-10 max-w-7xl mx-auto">
+
         {/* Header */}
         <motion.div initial={{ opacity: 0, x: -50 }} animate={inView ? { opacity: 1, x: 0 } : {}} className="mb-24">
           <h2 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter uppercase italic text-white">

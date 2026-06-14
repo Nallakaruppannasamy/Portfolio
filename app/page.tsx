@@ -9,6 +9,7 @@ import ProjectsSection from '@/components/sections/ProjectsSection';
 import SkillsSection from '@/components/sections/SkillsSection';
 import ContactSection from '@/components/sections/ContactSection';
 import Navigation from '@/components/Navigation';
+import AchievementsSection from '@/components/sections/AchivementsSection';
 
 export default function Home() {
 
@@ -20,10 +21,11 @@ export default function Home() {
       {/* Portfolio Sections */}
       <HeroSection />
       <AboutSection />
-      <ExperienceSection />
-      <EducationSection />
       <SkillsSection />
       <ProjectsSection />
+      <AchievementsSection />
+      <ExperienceSection />
+      <EducationSection />
       <ContactSection />
     </main>
   );

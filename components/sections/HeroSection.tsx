@@ -11,6 +11,7 @@ export default function HeroSection() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [isBooted, setIsBooted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
 
   // Mouse Follower Springs for smooth movement
   const mouseX = useSpring(0, { stiffness: 50, damping: 20 });
@@ -42,6 +43,10 @@ export default function HeroSection() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <section
@@ -195,7 +200,9 @@ export default function HeroSection() {
                 <Terminal size={80} className="mx-auto mb-6 text-cyan-500 drop-shadow-[0_0_15px_rgba(6,182,212,0.5)] transition-transform group-hover:scale-110" />
                 <div className="flex flex-col gap-1">
                   <span className="text-xs font-mono text-muted-foreground tracking-[0.4em] uppercase">Architecture</span>
-                  <span className="text-[10px] font-mono text-cyan-500/50">Build: {new Date().toLocaleDateString()}</span>
+                  <span className="text-[10px] font-mono text-cyan-500/50">
+                    Build: {mounted ? new Date().toLocaleDateString() : "Loading..."}
+                  </span>
                 </div>
               </div>
             </motion.div>

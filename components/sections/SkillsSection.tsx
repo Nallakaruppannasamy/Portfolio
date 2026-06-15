@@ -168,7 +168,7 @@ export default function SkillsSection() {
         </motion.div>
 
         {/* --- OPTIMIZED MOBILE-RESPONSIVE MOVING CAROUSEL --- */}
-        <div className="mt-10 sm:mt-32 relative overflow-hidden py-6 sm:py-10 w-full horizontal-carousel-container">
+        <div className="mt-10 sm:mt-20 relative overflow-hidden py-6 sm:py-10 w-full horizontal-carousel-container">
           {/* Enhanced Feathered Edges for Mobile Smooth Layout */}
           <div className="absolute inset-y-0 left-0 w-12 sm:w-32 bg-linear-to-r from-[#050505] to-transparent z-30 pointer-events-none" />
           <div className="absolute inset-y-0 right-0 w-12 sm:w-32 bg-linear-to-l from-[#050505] to-transparent z-30 pointer-events-none" />
